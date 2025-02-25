@@ -1,96 +1,159 @@
 |  | Algorithm and Data Structure |
 |--|--|
-| NIM |  244107020242|
-| Nama |  Joseph Atem Deng Aruei |
+| NIM | 244107020242 |
+| Nama | Joseph Atem Deng Aruei |
 | Kelas | TI - 1I |
-| Repository | [link] https://github.com/JosephAt10/Semester-Two.git |
+| Repository | [link](https://github.com/JosephAt10/Semester-Two.git) |
 
-# Labs #1 Programming Fundamentals Review
+# Labs #2 Programming Fundamentals Review
 
-## 2.1.1. Selection Solution
+## **2.1 Experiment 1: Declaring Classes, Attributes, and Methods**
 
-The solution is implemented in Selection.java, and below is screenshot of the result.
+1. The solution is implemented in Student.java, and below is screenshot of the result
 
-![Alt](Weeks1/1.png)
-![Alt](Weeks1/2.png)
+![Alt](photo/1.png)
 
-**Brief explanaton:** There are 4 main step: 
-1. Input all grades
-2. Validate the input (If Invalid, repeat the process until we get the input right)
-3. Calculate and convert the final grade
-4. Decide the final status and show the statistics of the results
+**Brief explanaton:**
+ 1. A class named `Student` was created with the following attributes:
+   - studentID (String)
+   - name (String)
+   - className` (String)
+   - gpa (double)
+   - Therefore, the progrom can't run since it's lucking main method as shown above.
 
-## 2.2.1. Looping Solution
+### **2.1.3 Questions**
 
-The solution is implemented in Looping.java, and below is screenshot of the result.
+1. **Mention two characteristics of a class or object!**
+   - **Encapsulation**: A class encapsulates data (attributes) and behavior (methods) into a single unit.
+   - **Abstraction**: A class provides a clear structure and hides the internal implementation details from the user.
 
-![Alt](Weeks1/4.png)
+2. **How many attributes does the Student class have? List them!**
+   - The `Student` class has **4 attributes**:
+     1. studentID (String)
+     2. name (String)
+     3. className (String)
+     4. gpa (double)
 
-**Brief explanaton:** There are 7 main step: 
-1. Input NIM
-2. Use modulo operator to get the last two digits of the NIM (n)
-3. Validate whether the two digits are less than 10 or no (if less than 10, then sum the two digits to 10)
-4. Use a loop process to display the numbers until it reached the last two digits of the NIM (n)
-5. Check every loop whether the number is either 6 or 10. If it's 6 or 10, print a blank String/skip the number.
-6. Check if there's a 0 number. If there is, skip the 0 number
-7. Checks if the number is even or no. If it's an even number, prints the actual number. If it's an odd number, prints an arterisk.
+3. **How many methods does the Student class have? List them!**
+   - The `Student` class has **4 methods**:
+     1. print(): Displays student details.
+     2. changeClass(String newClass): Updates the class name.
+     3. updateGPA(double newGPA): Updates the GPA.
+     4. evaluate(): Evaluates student performance based on GPA.
 
-## 2.3.1. Array Solution
+4. **Modify the `updateGPA()` method to validate that the input GPA is within the range of 0.0 to 4.0. If it is out of range, display a message: "Invalid GPA. Must be between 0.0 and 4.0."**
+   
+    ![Alt](photo/3.png)
+    
+**Brief explanaton:**   
+The `updateGPA()` method was modified to validate that the input GPA is within the range of 0.0 to 4.0. If the input is out of range, it displays the message: "Invalid GPA. Must be between 0.0 and 4.0."
 
-The solution is implemented in Array.java, and below is screenshot of the result.
+5. **Explain how the `evaluate()` method evaluates student performance. What criteria does it use, and what does it return?**
+   - The `evaluate()` method checks the value of the `gpa` attribute and returns a performance evaluation based on the following criteria:
+     - If gpa >= 3.5, it returns "Excellent".
+     - If gpa >= 3.0, it returns "Good".
+     - If gpa >= 2.0, it returns "Fair".
+     - If gpa < 2.0, it returns "Poor".
 
-![Alt](Weeks1/5.png)
 
-**Brief explanaton:** There are 4 main step: 
-1. Input each Grade for each subject
-2. Convert each Grade on each subject into "equivalent value" and Letter Grade
-3. Calculate the IP by totaling the whole "equivalent value" and divide it by the length of the courses
-4. Display each Numeric Grades, Letter Grades, Bobot equivalent value for each subject and the overall IP
+## **2.2 Experiment 2: Object Instantiation and Accessing Attributes and Methods**
 
-## 2.4.1. Function Solution
+The solution is implemented in StudentMain.java, and below is screenshot of the result.
 
-The solution is implemented in Selection.java, and below is screenshot of the result.
+ ![Alt](photo/2.png)
+ 
+**Brief explanaton:**
+2. The following methods were implemented in the `Student` class:
+   - print(): Displays student details.
+   - changeClass(String newClass): Updates the class name.
+   - updateGPA(double newGPA): Updates the GPA.
+   - evaluate(): Evaluates student performance based on GPA.
 
-![Alt](Weeks1/6.png)
+### **2.2.3 Questions**
 
-**Brief explanaton:** There is one main step: 
-1. Display the result of that calculation
+1. **Show the line of code in `StudentMain` used for instantiation. What is the name of the created object?**
+   - The line of code for instantiation is:
+     ```java
+     Student student1 = new Student();
+     ```
+   - The name of the created object is `student1`.
 
-## 3. Assignment 1 Solution
+2. **How do you access attributes and methods of an object?**
+   - Attributes and methods of an object are accessed using the dot (`.`) operator. For example:
+     ```java
+     student1.name = "Tiara";
+     student1.print();
+     ```
 
-The solution is implemented in Assignment1.java, and below is screenshot of the result.
+3. **Why does the output of the first and second calls to `print()` differ?**
+   - The output differs because the `changeClass()` and `updateGPA()` methods are called between the two `print()` calls. These methods modify the `className` and `gpa` attributes, respectively, resulting in different values being printed.
 
-![Alt](Weeks1/4.png)
+## **2.3 Experiment 3: Creating Constructor**
 
-**Brief explanaton:** There are 4 main step: 
-1. Input the Code
-2. Check whether the inputted code matches the code in the cityCode[] Array
-3. If not, loops the process until the input is valid
-4. If matches, display the city name based on the code
+The solution is implemented in StudentMain.java, and below is screenshot of the result.
 
-## 3. Assignment 2 Solution
+![Alt](photo/4.png)
 
-The solution is implemented in Assignment2.java, and below is screenshot of the result.
+### **2.3.3 Questions**
 
-![Alt](Weeks1/11.png)
+1. **Show the line of code in `Student` used to declare the parameterized constructor.**
+   - The line of code for the parameterized constructor is:
+     ```java
+     public Student(String id, String name, String cls, double gpa) {
+         studentID = id;
+         this.name = name;
+         className = cls;
+         this.gpa = gpa;
+     }
+     ```
 
-**Brief explanaton:** There are 4 main step: 
-1. Input the Length, width and height
-2. Input the calculation type
-3. If 1 is choosen, calculate the Volume
-4. If 2 is choose, calculate the surface area
-5. If 3 is choosen, calculate the perimeter of the cube
-4. If 4 is choosen, Exit the program
+2. **In `StudentMain`, explain what the following line of code does:**
+   ```java
+   Student student2 = new Student("244107020040", "Rizky", "TI-11", 3.5);
+ This line of code creates a new Student object named student2 using the parameterized constructor and It initializes the object with the following values:
+- studentID = "244107020040"
+- name = "Rizky"
+- className = "TI-II"
+- gpa = 3.5
 
-## 3. Assignment 3 Solution
+3. **Remove the default constructor from `Student`, then compile and run the program. What happens? Explain why.**
+- If the default constructor is removed, the program will fail to compile when trying to create an object using the default constructor (e.g., Student student1 = new Student();). Because Java requires a default constructor if no constructors are defined
 
-The solution is implemented in Assignment3.java, and below is screenshot of the result.
+4. **After instantiating an object, do methods in Student need to be accessed in order? Explain.**
+- No, methods in the Student class do not need to be accessed in a specific order.
 
-![Alt](Weeks1/8.png)
-![Alt](Weeks1/9.png)
-![Alt](Weeks1/10.png)
+5. **Create a new object named student<StudentName> using the parameterized constructor from Student class.**
 
-**Brief explanaton:** There are 5 main step: 
-1. Input the number (n) of courses to input
-2. Input the number of course input the sks and input the days
-3. Search for the course
+![Alt](photo/5.png)
+
+## 2.4 Assignment 1 solution
+
+The solution is implemented in Course.java, and below is screenshot of the result.
+
+![Alt](photo/6.png)
+
+**Brief explanaton:**
+- The `Course` class was implemented with the following:
+  - **Attributes**:
+    - courseID (String): Unique code for the course.
+    - name (String): Full name of the course.
+    - credit (int): Semester Credit System (SKS).
+    - hour (int): Total weekly meeting hours.
+  - **Methods**:
+    - print()`: Displays all course details.
+    - changeCredit(int newCredit)`: Changes the SKS and informs the user.
+    - addHour(int hour): Adds extra hours to the course.
+    - reduceHour(int hour): Reduces course hours, ensuring enough hours remain.
+
+## 2.4 Assignment 2 solution
+
+
+
+
+
+
+
+
+
+
+
